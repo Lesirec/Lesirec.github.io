@@ -1,5 +1,18 @@
 let tg = window.Telegram.WebApp;
 
+// Получаем данные о размере экрана пользователя
+let screenWidth = window.innerWidth;
+
+// Обновляем стили в зависимости от размера экрана
+if (screenWidth < 768) {
+  // Пример изменения стилей для мобильных устройств
+  document.querySelector('.inner').style.gridTemplateColumns = '1fr';
+} else {
+  // Вернуть обычные стили для планшетов и десктопов
+  document.querySelector('.inner').style.gridTemplateColumns = 'repeat(auto-fill, minmax(200px, 1fr)';
+}
+
+
 tg.expand();
 
 tg.MainButton.textColor = "#FFFFFF";
