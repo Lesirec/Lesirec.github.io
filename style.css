@@ -8,23 +8,41 @@ body {
 
 .container {
   max-width: 100%;
-  padding: 0 10px;
-  margin: 0 auto;
+  padding: 0 10px; /* Добавим отступы по бокам контейнера */
+  box-sizing: border-box; /* Учтем padding в расчетах */
 }
 
 .inner {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  grid-template-columns: repeat(
+    auto-fit,
+    minmax(250px, 1fr)
+  ); /* Адаптивное количество колонок */
   gap: 10px;
 }
 
 .img {
-  width: 100%;
+  max-width: 100%;
   height: auto;
 }
 
 .item {
   text-align: center;
+}
+
+@media screen and (max-width: 768px) {
+  .inner {
+    grid-template-columns: repeat(
+      2,
+      1fr
+    ); /* При ширине экрана менее 768px будут 2 колонки */
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .inner {
+    grid-template-columns: 1fr; /* При ширине экрана менее 480px будет 1 колонка */
+  }
 }
 
 .btn {
