@@ -7,18 +7,20 @@ body {
 }
 
 .container {
-  max-width: 380px;
+  max-width: 100%;
+  padding: 0 10px;
+  margin: 0 auto;
 }
 
 .inner {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  grid-template-rows: 200px 200px 200px;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
   gap: 10px;
 }
 
 .img {
-  width: 150px;
+  width: 100%;
+  height: auto;
 }
 
 .item {
@@ -26,7 +28,8 @@ body {
 }
 
 .btn {
-  display: inline-block;
+  display: block;
+  margin: 10px auto;
   padding: 10px 20px;
   border: none;
   background: rgb(248, 168, 24);
@@ -34,7 +37,6 @@ body {
   color: #fff;
   text-transform: uppercase;
   font-weight: 700;
-
   transition: background 0.2s linear;
 }
 
