@@ -5,36 +5,34 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>EcoArgo</title>
     <link rel="stylesheet" href="styles.css">
+    <script defer src="scripts.js"></script>
 </head>
 <body>
-    <div class="promo-container">
-        <div class="carousel">
-            <div class="slide"><img src="1.png" alt="Акция 1"><div class="overlay"><button>Добавить в корзину</button></div></div>
+    <div class="header-space"></div>
+    <div class="container">
+        <div class="promo-block">
+            <div class="carousel">
+                <div class="slide active"><img src="1.png" alt="Акция 1"></div>
+                <div class="slide"><img src="2.png" alt="Акция 2"></div>
+                <div class="slide"><img src="3.png" alt="Акция 3"></div>
             </div>
-        <button class="profile-btn">👤</button>
-    </div>
-    <div class="content">
+            <button class="profile-btn">👤</button>
+        </div>
         <input type="text" class="search-bar" placeholder="Поиск...">
         <div class="categories">
-            <button>Категория 1</button>
-            <button>Категория 2</button>
-            <button>Категория 3</button>
-            <button>Категория 4</button>
-            <button>Категория 5</button>
-            <button>Категория 6</button>
-            <button>Категория 7</button>
-            <button>Категория 8</button>
-            <button>Категория 9</button>
+            <button data-category="1">Категория 1</button>
+            <button data-category="2">Категория 2</button>
+            <button data-category="3">Категория 3</button>
         </div>
         <div class="product-scroll">
-            <div class="product">Товар 1<img src="1.png"></div>
-            <div class="product">Товар 2<img src="1.png"></div>
-            <div class="product">Товар 3<img src="1.png"></div>
-            <div class="product">Товар 4<img src="1.png"></div>
-            <div class="product">Товар 5<img src="1.png"></div>
-            <div class="product">Товар 6<img src="1.png"></div>
+            <div class="products">
+                <div class="product">Товар 1</div>
+                <div class="product">Товар 2</div>
+                <div class="product">Товар 3</div>
+                <div class="product">Товар 4</div>
+                <div class="product">Товар 5</div>
+            </div>
         </div>
     </div>
-    <script src="scripts.js"></script>
 </body>
 </html>
