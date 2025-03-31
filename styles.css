@@ -54,7 +54,7 @@ body {
     display: flex;
     gap: 10px;
     justify-content: center;
-    padding: 15px;
+    padding: 35px;
     flex-wrap: wrap;
 }
 
