@@ -19,7 +19,7 @@ body {
 
 /* Добавляем отступ сверху */
 .header-space {
-    height: 10px;
+    height: 30px;
     background-color: #f5f5f5;
 }
 
@@ -71,6 +71,8 @@ body {
     overflow-x: auto;
     gap: 10px;
     padding-bottom: 10px;
+    scroll-snap-type: x mandatory; /* Плавный скролл */
+    white-space: nowrap;
 }
 
 .product {
