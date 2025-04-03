@@ -9,7 +9,7 @@ body {
     width: 100%;
     max-width: 480px;
     margin: auto;
-    background: rgb(241, 241, 241);
+    background: rgba(255, 255, 255, 0);
 }
 .promo-block {
     position: fixed; /* Фиксируем на фоне */
@@ -75,10 +75,10 @@ body {
     background: #e2e2e2;
     border-radius: 14px;
     font-size: 16px;
-    color: #575757;
+    color: #6b6b6b;
     text-align: left;
     cursor: pointer;
-
+    font-weight: bold;
     position: relative;
     top: 12px;
 }
@@ -88,14 +88,14 @@ body {
     width: 100%;
     border: none;
     outline: none;
-    font-size: 16px;
+    font-size: 14px;
 }
 
 .categories {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between; /* Равномерно распределяем кнопки */
-    width: 91%; /* Заполняет 91% ширины экрана */
+    width: 94%; /* Заполняет 91% ширины экрана */
     margin: 0 auto; /* Центрирование */
     gap: 8px; /* Отступ между кнопками */
     padding: 15;
@@ -114,7 +114,7 @@ body {
     cursor: pointer;
     transition: all 0.3s ease-in-out;
     text-align: center;
-
+    
     width: calc((100% - 16px) / 3); /* Делим ширину на 3 кнопки с учетом gap */
     aspect-ratio: 1 / 1; /* Делаем кнопки квадратными */
     font-size: 14px;
@@ -126,7 +126,7 @@ body {
 }
 
 .category-text {
-    color: rgb(0, 0, 0);
+    color: #424242;
     font-size: 14px;
     font-weight: bold;
 }
