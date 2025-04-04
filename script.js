@@ -17,3 +17,27 @@ window.addEventListener("scroll", () => {
     }
 });
 
+let cartCount = 0;
+
+function addToCart(button, price) {
+    if (!button.classList.contains("added")) {
+        button.classList.add("added");
+        button.textContent = `${price} Р ✓`;
+        cartCount++;
+    } else {
+        button.classList.remove("added");
+        button.textContent = `${price} Р +`;
+        cartCount--;
+    }
+
+    const cartButton = document.querySelector(".cart-btn");
+    if (cartCount > 0) {
+        cartButton.classList.remove("hidden");
+    } else {
+        cartButton.classList.add("hidden");
+    }
+}
+
+function openCart() {
+    alert("Открытие корзины...");
+}
