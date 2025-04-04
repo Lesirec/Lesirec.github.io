@@ -17,6 +17,7 @@
                 <div class="slide"><img src="3.png" alt="Акция 3"></div>
             </div>
             <button class="profile-btn">👤</button>
+            <button class="cart-btn hidden" onclick="openCart()">🛒</button>
         </div>
         <div class="sale-block">
             <div class="search-button" onclick="">
@@ -62,12 +63,35 @@
                 </div>
                 
                 <div class="product-scroll">
-                    <div class="products">
-                        <div class="product">Товар 1</div>
-                        <div class="product">Товар 2</div>
-                        <div class="product">Товар 3</div>
-                        <div class="product">Товар 4</div>
-                        <div class="product">Товар 5</div>
+                    <div class="product-card">
+                        <img src="1.png" alt="Товар 1">
+                        <div class="product-title">Флорента</div>
+                        <button class="add-to-cart" onclick="addToCart(this, 300)">300 Р +</button>
+                    </div>
+                    <div class="product-card">
+                        <img src="1.png" alt="Товар 2">
+                        <div class="product-title">Флорента</div>
+                        <button class="add-to-cart" onclick="addToCart(this, 500)">500 Р +</button>
+                    </div>
+                    <div class="product-card">
+                        <img src="1.png" alt="Товар 3">
+                        <div class="product-title">Флорента</div>
+                        <button class="add-to-cart" onclick="addToCart(this, 450)">450 Р +</button>
+                    </div>
+                    <div class="product-card">
+                        <img src="1.png" alt="Товар 1">
+                        <div class="product-title">Флорента</div>
+                        <button class="add-to-cart" onclick="addToCart(this, 300)">300 Р +</button>
+                    </div>
+                    <div class="product-card">
+                        <img src="1.png" alt="Товар 2">
+                        <div class="product-title">Флорента</div>
+                        <button class="add-to-cart" onclick="addToCart(this, 500)">500 Р +</button>
+                    </div>
+                    <div class="product-card">
+                        <img src="1.png" alt="Товар 3">
+                        <div class="product-title">Флорента</div>
+                        <button class="add-to-cart" onclick="addToCart(this, 450)">450 Р +</button>
                     </div>
                 </div>
             </div>
@@ -75,3 +99,4 @@
     </div>
 </body>
 </html>
+
