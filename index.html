@@ -64,39 +64,70 @@
                 
                 <div class="product-scroll">
                     <div class="product-card">
-                        <img src="1.png" alt="Товар 1">
-                        <div class="product-title">Флорента</div>
+                        <div class="image-container">
+                            <img src="1.png" alt="Товар 1">
+                            <div class="overlay">
+                                <span class="quantity">0</span>
+                            </div>
+                        </div>
+                        <div class="product-title">Флорент1а</div>
                         <button class="add-to-cart" onclick="addToCart(this, 300)">300 Р +</button>
                     </div>
                     <div class="product-card">
-                        <img src="1.png" alt="Товар 2">
-                        <div class="product-title">Флорента</div>
-                        <button class="add-to-cart" onclick="addToCart(this, 500)">500 Р +</button>
-                    </div>
-                    <div class="product-card">
-                        <img src="1.png" alt="Товар 3">
-                        <div class="product-title">Флорента</div>
-                        <button class="add-to-cart" onclick="addToCart(this, 450)">450 Р +</button>
-                    </div>
-                    <div class="product-card">
-                        <img src="1.png" alt="Товар 1">
-                        <div class="product-title">Флорента</div>
+                        <div class="image-container">
+                            <img src="1.png" alt="Товар 2">
+                            <div class="overlay">
+                                <span class="quantity">0</span>
+                            </div>
+                        </div>
+                        <div class="product-title">Флорента2</div>
                         <button class="add-to-cart" onclick="addToCart(this, 300)">300 Р +</button>
                     </div>
                     <div class="product-card">
-                        <img src="1.png" alt="Товар 2">
-                        <div class="product-title">Флорента</div>
-                        <button class="add-to-cart" onclick="addToCart(this, 500)">500 Р +</button>
+                        <div class="image-container">
+                            <img src="1.png" alt="Товар 3">
+                            <div class="overlay">
+                                <span class="quantity">0</span>
+                            </div>
+                        </div>
+                        <div class="product-title">Флорента3</div>
+                        <button class="add-to-cart" onclick="addToCart(this, 300)">300 Р +</button>
                     </div>
                     <div class="product-card">
-                        <img src="1.png" alt="Товар 3">
-                        <div class="product-title">Флорента</div>
-                        <button class="add-to-cart" onclick="addToCart(this, 450)">450 Р +</button>
+                        <div class="image-container">
+                            <img src="1.png" alt="Товар 4">
+                            <div class="overlay">
+                                <span class="quantity">0</span>
+                            </div>
+                        </div>
+                        <div class="product-title">Флорента4</div>
+                        <button class="add-to-cart" onclick="addToCart(this, 300)">300 Р +</button>
+                    </div>
+                    <div class="product-card">
+                        <div class="image-container">
+                            <img src="1.png" alt="Товар 5">
+                            <div class="overlay">
+                                <span class="quantity">0</span>
+                            </div>
+                        </div>
+                        <div class="product-title">Флорента5</div>
+                        <button class="add-to-cart" onclick="addToCart(this, 300)">300 Р +</button>
+                    </div>
+                    
+                <div id="cart-modal" class="cart-modal hidden">
+                    <div class="cart-modal-content">
+                        <h2>Ваша корзина</h2>
+                        <div id="cart-items"></div>
+                        <div class="cart-total">
+                            <span>Итого:</span>
+                            <span id="cart-total-price">0 Р</span>
+                        </div>
+                        <button class="close-cart" onclick="closeCart()">Закрыть</button>
                     </div>
                 </div>
             </div>
         </div>
     </div>
+    
 </body>
 </html>
-
