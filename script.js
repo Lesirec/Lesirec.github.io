@@ -151,6 +151,68 @@ function hideCartButton() {
     document.querySelector('.cart-btn').classList.add('hidden');
 }
 
+
+
+
+let currentSlide = 0;
+const slides = document.querySelectorAll('.carousel .slide');
+const dots = document.querySelectorAll('.carousel-indicators .dot');
+
+function showSlide(index) {
+    if (index >= slides.length) index = 0;
+    if (index < 0) index = slides.length - 1;
+    currentSlide = index;
+    document.querySelector('.carousel').style.transform = `translateX(-${index * 100}%)`;
+
+    dots.forEach((dot, i) => dot.classList.toggle('active', i === index));
+}
+
+// Кнопки навигации
+document.querySelector('.carousel-btn.next').addEventListener('click', () => {
+    showSlide(currentSlide + 1);
+});
+document.querySelector('.carousel-btn.prev').addEventListener('click', () => {
+    showSlide(currentSlide - 1);
+});
+
+// Индикаторы
+dots.forEach((dot, index) => {
+    dot.addEventListener('click', () => showSlide(index));
+});
+
+// Автоматическая прокрутка
+setInterval(() => {
+    showSlide(currentSlide + 1);
+}, 5000);
+
+
+
+
+
+
+
 function openCart() {
     alert('Корзина:\n' + JSON.stringify(cart, null, 2));
 }
+
+
+
+
+document.querySelectorAll('.product-card').forEach(card => {
+    card.addEventListener('click', function () {
+        let title = this.querySelector('.product-title').innerText;
+        let price = this.querySelector('.add-to-cart').innerText;
+        let img = this.querySelector('img').src;
+
+        document.getElementById('modal-title').innerText = title;
+        document.getElementById('modal-price').innerText = price;
+        document.getElementById('modal-main-img').src = img;
+        document.getElementById('modal-description').innerText = "Описание товара тут...";
+
+        document.getElementById('product-modal').classList.add('active');
+    });
+});
+
+document.querySelector('.close-modal').addEventListener('click', function () {
+    document.getElementById('product-modal').classList.remove('active');
+});
