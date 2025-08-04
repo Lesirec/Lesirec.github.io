@@ -9,15 +9,32 @@
 </head>
 <body>
     <div class="header-space"></div>
-    <div class="container">
-        <div class="promo-block">
+        <div class="container">
+            <div class="promo-block">
             <div class="carousel">
-                <div class="slide active"><img src="1.png" alt="Акция 1"></div>
-                <div class="slide"><img src="2.jpg" alt="Акция 2"></div>
-                <div class="slide"><img src="3.png" alt="Акция 3"></div>
+                <div class="slide active">
+                    <img src="1.png" alt="Акция 1">
+                </div>
+                <div class="slide">
+                    <video autoplay muted loop playsinline>
+                        <img src="1.jpg" alt="Акция 3">
+                    </video>
+                </div>
+                <div class="slide">
+                    <img src="2.jpg" alt="Акция 2">
+                </div>
             </div>
-            <button class="profile-btn">👤</button>
-            <button class="cart-btn hidden" onclick="openCart()">🛒</button>
+
+            <!-- Кнопки навигации -->
+            <button class="carousel-btn prev">&#10094;</button>
+            <button class="carousel-btn next">&#10095;</button>
+
+            <!-- Индикаторы -->
+            <div class="carousel-indicators">
+                <span class="dot active"></span>
+                <span class="dot"></span>
+                <span class="dot"></span>
+            </div>
         </div>
         <div class="sale-block">
             <div class="search-button" onclick="">
@@ -128,6 +145,24 @@
             </div>
         </div>
     </div>
-    
+        <!-- Модальное окно карточки товара -->
+    <div id="product-modal" class="product-modal">
+        <div class="modal-content">
+            <button class="close-modal">&times;</button>
+            
+            <div class="product-gallery">
+                <img id="modal-main-img" src="" alt="Фото товара">
+            </div>
+            
+            <h2 id="modal-title"></h2>
+            <p id="modal-price"></p>
+            
+            <div id="modal-description"></div>
+
+            <button id="modal-add-to-cart" class="add-to-cart-btn">Добавить в корзину</button>
+        </div>
+    </div>
 </body>
 </html>
+
+
